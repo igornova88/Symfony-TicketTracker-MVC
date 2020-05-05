@@ -112,7 +112,18 @@ a:focus {
     margin-bottom: 15px;
     border-left: 1px solid #fff;
 }
+.navbar .nav-link  {
+    color: #fff;
+}
 
+
+.navbar .nav-item.logout {
+    margin-left: 25px
+}
+.navbar .nav-item.dropdown {
+    width: 110px;
+    margin-left: 25px;
+}
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
@@ -248,6 +259,7 @@ ul ul a {
     width: 100%;
     min-height: 100vh;
     transition: all 0.3s;
+    padding-bottom: 75px;
 }
 
 #sidebar.active ul li a span {
@@ -292,6 +304,10 @@ footer {
 footer .footer-links a {
     display: inline-block;
     margin-left: 10px;
+}
+.card {
+    box-shadow: 0 0px 20px rgba(0,0,0, .1);
+    border: none;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES

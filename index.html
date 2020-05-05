@@ -11,11 +11,58 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
+
+    <!-- jqGrid CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css">
+
+    <style>
+        .ui-jqgrid, 
+        .ui-jqgrid-view,
+        .ui-jqgrid>.ui-jqgrid-view>.ui-jqgrid-hdiv,
+        .ui-jqgrid-hbox,
+        .ui-jqgrid .ui-jqgrid-htable,
+        .ui-jqgrid .ui-jqgrid-bdiv,
+        .ui-jqgrid .ui-jqgrid-btable,
+        .ui-jqgrid-labels {
+                        min-width: 100%;
+        }
+        .ui-widget-content {
+            border-color: #e9ecef;
+            color: #6c757d;
+        }
+
+        .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr, 
+        .ui-th-ltr,
+        .ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-labels th div {
+            background-color: #021a3c !important;
+            color:#fff !important;
+        }
+
+        .ui-state-default, 
+        .ui-widget-content .ui-state-default, 
+        .ui-widget-header .ui-state-default {
+            border: 1px solid #fff ;
+            background: #e9ecef !important;
+        }
+
+        .ui-state-hover, 
+        .ui-widget-content .ui-state-hover, 
+        .ui-widget-header .ui-state-hover, 
+        .ui-state-focus, 
+        .ui-widget-content .ui-state-focus, 
+        .ui-widget-header .ui-state-focus {
+            background: #e9ecef !important;
+            border-color: #fff !important ;
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -31,13 +78,13 @@
             <ul class="list-unstyled components">
                 <li>
                     <a href="#">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-chart-line"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-list-alt"></i>
                         <span>Home</span>
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -57,13 +104,13 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-briefcase"></i>
                         <span>Projects</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-users"></i>
                         <span>Users</span>
                     </a>
                 </li>
@@ -74,7 +121,7 @@
         <!-- Page Content  -->
         <div id="main">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -90,14 +137,24 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Page</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
+
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Projects
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Project1</a>
+                                    <a class="dropdown-item" href="#">Project2</a>
+                                    <a class="dropdown-item" href="#">Project3</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">See all projects ...
+                                    </a>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
+                            <li class="nav-item logout">
+                                <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i></a>
+                                
                             </li>
                         </ul>
                     </div>
@@ -128,9 +185,18 @@
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
+
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h3 class="text-center">Content goes here!</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <table id="grid"></table>
+
+
+
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,19 +220,43 @@
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jqGrid JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script>
+
+
 
     <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
+            
+            $(function () {
+                $("#grid").jqGrid({
+                    colModel: [
+                        { name: "firstName" },
+                        { name: "lastName" },
+                        { name: "role" },
+                        { name: "options" }
+                    ],
+                    data: [
+                        { id: 10, firstName: "Angela", lastName: "Merkel" },
+                        { id: 20, firstName: "Vladimir", lastName: "Putin" },
+                        { id: 30, firstName: "David", lastName: "Cameron" },
+                        { id: 40, firstName: "Barack", lastName: "Obama" },
+                        { id: 50, firstName: "François", lastName: "Hollande" }
+                    ]
+                });
+            });
         });
     </script>
+
 </body>
 
 </html>
