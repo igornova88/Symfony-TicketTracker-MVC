@@ -22,7 +22,7 @@ class DefaultController extends AbstractController
             // the above is just a shortcut for:
             // throw new NotFoundHttpException('The product does not exist');
         // }
-        return $this->render('base.html.twig', [
+        return $this->render('dashboard/page.html.twig', [
             'number' => $number,
         ]);
     }
