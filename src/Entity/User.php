@@ -19,6 +19,21 @@ class User implements UserInterface
     private $id;
 
     /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="string", length=180)
+     */
+    private $lastname;
+    
+    /**
+     * @ORM\Column(type="string", length=180, unique=true)
+     */
+    private $username;
+
+    /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
@@ -38,6 +53,32 @@ class User implements UserInterface
     {
         return $this->id;
     }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+
 
     public function getEmail(): ?string
     {
@@ -59,6 +100,12 @@ class User implements UserInterface
     public function getUsername(): string
     {
         return (string) $this->email;
+    }
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
     }
 
     /**
