@@ -23,12 +23,9 @@ class AppFixtures extends Fixture
         $this->loadProjects($manager);
         $this->loadUsers($manager);
         $this->loadComments($manager);
+        $this->loadTask($manager);
     }
     
-
-
-
-
     private function loadProjects(ObjectManager $manager): void
     {
         // @todo - change this to loadProjects
@@ -41,9 +38,6 @@ class AppFixtures extends Fixture
 
         $manager->flush();
     }
-
-
-
 
     private function loadUsers(ObjectManager $manager): void
     {
@@ -74,6 +68,19 @@ class AppFixtures extends Fixture
         $manager->flush();
     }
 
+    private function loadTask(ObjectManager $manager): void
+    {
+        foreach ($this->getTaskData() as [$description, $title, $timespent, $timeEstimated]) {
+            $task = new Comment();
+            $task->setDescription($description);
+            $task->setTitle($title);
+            $task->setTimeSpent($timeSpent);
+            $task->setTimeEstimated($timeEstimated);
+            $manager->persist($task);
+        }
+        $manager->flush();
+    }
+
     private function getProjectData(): array
     {
         return [
@@ -83,6 +90,7 @@ class AppFixtures extends Fixture
             ['Project Three', 0],
         ];
     }
+
     private function getUserData(): array
     {
         return [
@@ -90,6 +98,16 @@ class AppFixtures extends Fixture
             ['Jane', 'Doe', 'jane_admin', 'kitten', 'jane_admin@symfony.com', ['ROLE_ADMIN']],
             ['Tom', 'Doe', 'tom_admin', 'kitten', 'tom_admin@symfony.com', ['ROLE_ADMIN']],
             ['John', 'Doe', 'john_user', 'kitten', 'john_user@symfony.com', ['ROLE_USER']],
+        ];
+    }
+
+    private function getTaskData(): array
+    {
+        return [
+            // $userData = [$description, $title, $timespent, $timeEstimated];
+            ['Lorem ipsum dolor sit amet1, consectetur adipiscing elit1', 'Task1', '[1h]', ['10h']],
+            ['Lorem ipsum dolor sit amet1, consectetur adipiscing elit2', 'Task2', '[2h]', ['20h']],
+            ['Lorem ipsum dolor sit amet1, consectetur adipiscing elit3', 'Task3', '[2h]', ['30h']],
         ];
     }
 }
