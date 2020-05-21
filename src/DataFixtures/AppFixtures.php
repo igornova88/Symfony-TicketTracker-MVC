@@ -28,7 +28,6 @@ class AppFixtures extends Fixture
     
     private function loadProjects(ObjectManager $manager): void
     {
-        // @todo - change this to loadProjects
         foreach ($this->getProjectData() as [$fullname, $active]) {
             $project = new Project();
             $project->setName($fullname);
