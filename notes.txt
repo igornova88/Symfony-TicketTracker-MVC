@@ -15,3 +15,85 @@ http://localhost/phpmyadmin/
 
 
 User Management
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+DONUTS
+getStructuredDataForDonuts
+    getAvgScoresOfAudit         
+    getAvgScoresForLastYear
+
+        FROM flat_result_table_0 LEFT JOIN audit on audit_idaudit = audit.idaudit WHERE
+        $q .= $this->constraintForSitesAndAuditsBasedOnRoles;
+
+
+getStructuredLabelsForAvgScoresOfAudit
+    getLabelsForAvgScoresOfAudit
+    
+        FROM flat_result_table_0 LEFT JOIN audit on audit_idaudit = audit.idaudit WHERE
+        $q .= $this->constraintForSitesAndAuditsBasedOnRoles;
+
+
+--------------------------------------------------------------------------------------------------------
+MAIN DIAGRAM
+getStructuredDataForDiagramByMontsAmChart
+    getAvgScoresOfAuditByTime
+
+        FROM flat_result_table_0 LEFT JOIN audit on audit_idaudit = audit.idaudit WHERE
+        $q .= $this->constraintForSitesAndAuditsBasedOnRoles;
+
+labelsForQualityEvolutionAmChart -> getStructuredLabelsForAvgScoresOfAudit
+    getLabelsForAvgScoresOfAudit 
+        DONE ABOVE
+    
+
+--------------------------------------------------------------------------------------------------------
+RADAR AND BARS
+getStructuredDataForPerformanceAmChart
+    getPerformanceResults 
+        FROM flat_result_table_1 LEFT JOIN audit on audit_idaudit = audit.idaudit WHERE 1=1";
+
+getStructuredDataForStackedAmCharts
+    getPerformanceResults
+        DONE ABOVE
+    getNombreLocauxResults
+        FROM flat_result_table_2 LEFT JOIN audit on audit_idaudit = audit.idaudit WHERE 1=1";
+        $q .= $this->constraintForSitesAndAuditsBasedOnRoles;
+
+
+--------------------------------------------------------------------------------------------------------
+DYSFUNCTION
+getStructuredDataForDysfunction
+    getDysfunctionResults
+        FROM flat_result_table_3 LEFT JOIN audit on audit_idaudit = audit.idaudit WHERE 1=1";
+        $q .= $this->constraintForSitesAndAuditsBasedOnRoles;
+
+
+--------------------------------------------------------------------------------------------------------
+RESPONSES
+  getAuditIdsForCriteria
+      
+        $q = "SELECT audit_idaudit FROM flat_result_table_0 WHERE = au_error = 0 ";
+        $q .= $this->constraintForSitesAndAuditsBasedOnRoles;
+
+
+
+--------------------------------------------------------------------------------------------------------
+PENALTIES
+getStructuredDataForPenaltiesDiagram
+    getPenaltiesResultForAll
+    getPenaltiesResultBySite
+    
+getStructuredDataForPenaltiesDiagramAmChart
+    getPenaltiesResultByPresta
