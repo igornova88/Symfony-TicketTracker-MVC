@@ -7,7 +7,6 @@
 
     <title>Titcket Tracker</title>
 
-    {% block stylesheets %}
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Custom CSS -->
@@ -16,49 +15,13 @@
     <!-- jqGrid CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css">
+    
+    {% block stylesheets %}
+    {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+    {{ encore_entry_link_tags('app') }}
+
     {% endblock %}
 
-    <style>
-        .ui-jqgrid, 
-        .ui-jqgrid-view,
-        .ui-jqgrid>.ui-jqgrid-view>.ui-jqgrid-hdiv,
-        .ui-jqgrid-hbox,
-        .ui-jqgrid .ui-jqgrid-htable,
-        .ui-jqgrid .ui-jqgrid-bdiv,
-        .ui-jqgrid .ui-jqgrid-btable,
-        .ui-jqgrid-labels {
-                        min-width: 100%;
-        }
-        .ui-widget-content {
-            border-color: #e9ecef;
-            color: #6c757d;
-        }
-
-        .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr, 
-        .ui-th-ltr,
-        .ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-labels th div {
-            background-color: #021a3c !important;
-            color:#fff !important;
-        }
-
-        .ui-state-default, 
-        .ui-widget-content .ui-state-default, 
-        .ui-widget-header .ui-state-default {
-            border: 1px solid #fff ;
-            background: #e9ecef !important;
-        }
-
-        .ui-state-hover, 
-        .ui-widget-content .ui-state-hover, 
-        .ui-widget-header .ui-state-hover, 
-        .ui-state-focus, 
-        .ui-widget-content .ui-state-focus, 
-        .ui-widget-header .ui-state-focus {
-            background: #e9ecef !important;
-            border-color: #fff !important ;
-        }
-    </style>
-    
 </head>
 
 <body class="wrapper">
@@ -74,6 +37,13 @@
             {% block content %}{% endblock %}
         </div>
 
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+
+        <!-- Renders app.js & a webpack runtime.js file
+            <script src="/build/runtime.js"></script>
+            <script src="/build/app.js"></script> -->
+    {% endblock %}
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Popper.JS -->

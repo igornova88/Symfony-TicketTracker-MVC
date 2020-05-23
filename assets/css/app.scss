@@ -1,0 +1,39 @@
+.ui-jqgrid, 
+.ui-jqgrid-view,
+.ui-jqgrid>.ui-jqgrid-view>.ui-jqgrid-hdiv,
+.ui-jqgrid-hbox,
+.ui-jqgrid .ui-jqgrid-htable,
+.ui-jqgrid .ui-jqgrid-bdiv,
+.ui-jqgrid .ui-jqgrid-btable,
+.ui-jqgrid-labels {
+                min-width: 100%;
+}
+.ui-widget-content {
+    border-color: #e9ecef;
+    color: #6c757d;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr, 
+.ui-th-ltr,
+.ui-jqgrid .ui-jqgrid-htable .ui-jqgrid-labels th div {
+    background-color: #021a3c !important;
+    color:#fff !important;
+}
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+    border: 1px solid #fff ;
+    background: #e9ecef !important;
+}
+
+.ui-state-hover, 
+.ui-widget-content .ui-state-hover, 
+.ui-widget-header .ui-state-hover, 
+.ui-state-focus, 
+.ui-widget-content .ui-state-focus, 
+.ui-widget-header .ui-state-focus {
+    background: #e9ecef !important;
+    border-color: #fff !important ;
+}
+
