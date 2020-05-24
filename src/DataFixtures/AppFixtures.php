@@ -110,3 +110,45 @@ class AppFixtures extends Fixture
         ];
     }
 }
+
+
+// Initial commit - add static files for app shell - menu and nav
+// add static footer, breadcrumbs, page title, menu subtitl
+
+// Igor: add jqGrid with static data, and matchin style
+// Add symfony framework and first route
+// Connect to github repo
+// Cut footer, sidebar, topmenu in separate twig templates
+// Add Project entity with basic fields and form for that entity
+
+// make ProjectController and start on CRUD for Project
+// add static footer, breadcrumbs, page title, menu subtitle
+// Igor: add jqGrid with static data, and matchin style
+// Add symfony framework and first route
+// Connect to github repo
+// Cut footer, sidebar, topmenu in separate twig templates
+// Add Project entity with basic fields and form for that entity
+// make ProjectController and start on CRUD for Project
+// Initial commit - add static files for app shell - menu and nav
+// add static footer, breadcrumbs, page title, menu subtitle
+// Igor: add jqGrid with static data, and matchin style
+// Add symfony framework and first route
+// Cut footer, sidebar, topmenu in separate twig templates
+// make ProjectController and start on CRUD for Project
+// Add Project entity with basic fields and form for that entity
+// Add data fixtures for Project entitiy
+// add Task entity
+// remove unused icons
+// Add User entity and fixtures
+// Add new fields to User entity
+
+// Add Comment entity
+// Add login page template
+// Add Comment fixture
+// Set template for new user and user list
+// Add Fixtures for Task
+// Remove some comments
+// Update notes
+// Add Webpack Encore and enable SASS
+// Add login page template
+// Add Comment fixture
