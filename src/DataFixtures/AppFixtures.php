@@ -104,51 +104,24 @@ class AppFixtures extends Fixture
     {
         return [
             // $userData = [$description, $title, $timespent, $timeEstimated];
-            ['Lorem ipsum dolor sit amet1, consectetur adipiscing elit1', 'Task1', '[1h]', ['10h']],
-            ['Lorem ipsum dolor sit amet1, consectetur adipiscing elit2', 'Task2', '[2h]', ['20h']],
-            ['Lorem ipsum dolor sit amet1, consectetur adipiscing elit3', 'Task3', '[2h]', ['30h']],
+            ['add static files for app shell', 'Task1', '[1h]', ['10h']],
+            ['add static footer, breadcrumbs, page title, menu subtitl', 'Task2', '[2h]', ['20h']],
+            ['add jqGrid with static data, and matchin style', 'Task3', '[2h]', ['30h']],
+            ['Add symfony framework and first route', 'Task3', '[2h]', ['30h']],
+            ['Add Project entity with basic fields and form for that entity', 'Task3', '[2h]', ['30h']],
+            ['make ProjectController and start on CRUD for Project', 'Task3', '[2h]', ['30h']],
+            ['Add data fixtures for Project entitiy', 'Task3', '[2h]', ['30h']],
+            ['add Task entity', 'Task3', '[2h]', ['30h']],
+            ['remove unused icons', 'Task3', '[2h]', ['30h']],
+            ['Add User entity and fixtures', 'Task3', '[2h]', ['30h']],
+            ['Add new fields to User entity', 'Task3', '[2h]', ['30h']],
+            ['Add login page template', 'Task3', '[2h]', ['30h']],
+            ['Set template for new user and user list', 'Task3', '[2h]', ['30h']],
+            ['Add Fixtures for Task', 'Task3', '[2h]', ['30h']],
+            ['Remove some comments', 'Task3', '[2h]', ['30h']],
+            ['Update notes', 'Task3', '[2h]', ['30h']],
+            ['Add Webpack Encore and enable SASS', 'Task3', '[2h]', ['30h']],
+            ['Add Comment fixture', 'Task3', '[2h]', ['30h']],
         ];
     }
 }
-
-
-// Initial commit - add static files for app shell - menu and nav
-// add static footer, breadcrumbs, page title, menu subtitl
-
-// Igor: add jqGrid with static data, and matchin style
-// Add symfony framework and first route
-// Connect to github repo
-// Cut footer, sidebar, topmenu in separate twig templates
-// Add Project entity with basic fields and form for that entity
-
-// make ProjectController and start on CRUD for Project
-// add static footer, breadcrumbs, page title, menu subtitle
-// Igor: add jqGrid with static data, and matchin style
-// Add symfony framework and first route
-// Connect to github repo
-// Cut footer, sidebar, topmenu in separate twig templates
-// Add Project entity with basic fields and form for that entity
-// make ProjectController and start on CRUD for Project
-// Initial commit - add static files for app shell - menu and nav
-// add static footer, breadcrumbs, page title, menu subtitle
-// Igor: add jqGrid with static data, and matchin style
-// Add symfony framework and first route
-// Cut footer, sidebar, topmenu in separate twig templates
-// make ProjectController and start on CRUD for Project
-// Add Project entity with basic fields and form for that entity
-// Add data fixtures for Project entitiy
-// add Task entity
-// remove unused icons
-// Add User entity and fixtures
-// Add new fields to User entity
-
-// Add Comment entity
-// Add login page template
-// Add Comment fixture
-// Set template for new user and user list
-// Add Fixtures for Task
-// Remove some comments
-// Update notes
-// Add Webpack Encore and enable SASS
-// Add login page template
-// Add Comment fixture
