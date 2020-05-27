@@ -42,6 +42,12 @@ class Task
      */
     private $timeEstimated;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Project::class, inversedBy="tasks")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $project;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +109,18 @@ class Task
     public function setTimeEstimated(?string $timeEstimated): self
     {
         $this->timeEstimated = $timeEstimated;
+
+        return $this;
+    }
+
+    public function getProject(): ?Project
+    {
+        return $this->project;
+    }
+
+    public function setProject(?Project $project): self
+    {
+        $this->project = $project;
 
         return $this;
     }
