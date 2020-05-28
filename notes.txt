@@ -97,3 +97,41 @@ getStructuredDataForPenaltiesDiagram
     
 getStructuredDataForPenaltiesDiagramAmChart
     getPenaltiesResultByPresta
+
+
+
+
+
+
+
+
+
+DELETE FROM `structure` WHERE id != 1444 
+AND id != 1454
+AND id != 1501
+AND id != 1532
+AND id != 1537
+AND id != 1540
+AND id != 1604
+AND id != 1606
+AND id != 1611
+AND id != 1620
+AND id != 1626
+AND id != 1628
+AND id != 1640
+AND id != 1677
+AND id != 1693
+AND id != 2809
+AND id != 3113
+AND structure_business_id = 19
+AND structure_type_id = 28
+
+DELETE FROM `structure` WHERE id != 1405 AND `structure_business_id` = 21
+
+
+DELETE FROM `structure` WHERE id != 1445 AND id != 1502 AND id != 1529 AND id != 1562 AND `structure_business_id` = 20
+
+
+
+
+
