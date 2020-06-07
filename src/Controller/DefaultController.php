@@ -62,7 +62,11 @@ class DefaultController extends AbstractController
 
         // https://www.easyxls.com/manual/basics/export-to-xlsm-file-format.html
         // Create an instance of the class that exports Excel files
-        // $workbook = new \COM("EasyXLS.ExcelDocument");
+        try {
+            $workbook = new \com("EasyXLS.ExcelDocument");
+        }catch(\Exception $e) {
+            echo $e->getMessage();
+        }
 
         // Load the XLSM template file
         // $workbook->easy_LoadXLSXFile($excelFile);
@@ -78,6 +82,7 @@ class DefaultController extends AbstractController
 
         // https://stackoverflow.com/questions/39333973/converting-excel-to-pdf-using-php
         // $xlapp =  new \COM("Excel.Application");
+        dump($e->getMessage());exit;
         // // dump($xlapp);exit;
         // // dump(1); exit;
         
