@@ -122,6 +122,7 @@ class AppFixtures extends Fixture
             ['Update notes', 'Task3', '[2h]', ['30h']],
             ['Add Webpack Encore and enable SASS', 'Task3', '[2h]', ['30h']],
             ['Add Comment fixture', 'Task3', '[2h]', ['30h']],
+            ['read excel files', 'Task3', '[2h]', ['30h']],
         ];
     }
 }
