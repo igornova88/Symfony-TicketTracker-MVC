@@ -104,15 +104,15 @@ class AppFixtures extends Fixture
     {
         return [
             // $userData = [$description, $title, $timespent, $timeEstimated];
-            ['add static files for app shell', 'Task1', '[10h]', ['10h']],
-            ['add static footer, breadcrumbs, page title, menu subtitl', 'Task2', '[5h]', ['10h']],
-            ['add jqGrid with static data, and matchin style', 'Task3', '[2h]', ['30h']],
+            ['Add static files for app shell', 'Task1', '[10h]', ['10h']],
+            ['Add static footer, breadcrumbs, page title, menu subtitl', 'Task2', '[5h]', ['10h']],
+            ['Add jqGrid with static data, and matchin style', 'Task3', '[2h]', ['20h']],
             ['Add symfony framework and first route', 'Task4', '[2h]', ['30h']],
             ['Add Project entity with basic fields and form for that entity', 'Task5', '[2h]', ['30h']],
-            ['make ProjectController and start on CRUD for Project', 'Task6', '[2h]', ['30h']],
+            ['Make ProjectController and start on CRUD for Project', 'Task6', '[2h]', ['30h']],
             ['Add data fixtures for Project entitiy', 'Task7', '[2h]', ['30h']],
-            ['add Task entity', 'Task8', '[2h]', ['30h']],
-            ['remove unused icons', 'Task9', '[2h]', ['30h']],
+            ['Add Task entity', 'Task8', '[2h]', ['30h']],
+            ['Remove unused icons', 'Task9', '[2h]', ['30h']],
             ['Add User entity and fixtures', 'Task10', '[2h]', ['30h']],
             ['Add new fields to User entity', 'Task3', '[2h]', ['30h']],
             ['Add login page template', 'Task3', '[2h]', ['30h']],
@@ -122,7 +122,7 @@ class AppFixtures extends Fixture
             ['Update notes', 'Task3', '[2h]', ['30h']],
             ['Add Webpack Encore and enable SASS', 'Task3', '[2h]', ['30h']],
             ['Add Comment fixture', 'Task3', '[2h]', ['30h']],
-            ['read excel files', 'Task3', '[2h]', ['30h']],
+            ['Read excel files', 'Task3', '[10h]', ['10h']],
         ];
     }
 }
