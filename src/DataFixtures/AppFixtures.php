@@ -11,6 +11,12 @@ use App\Entity\Comment;
 
 class AppFixtures extends Fixture
 {
+    
+    // $this->addReference('booking-state-' . $state['bsCode']);
+    // $this->addReference('booking-state-' . $state['bsCode']);
+    // $this->addReference('booking-state-' . $state['bsCode']);
+    // $this->addReference('booking-state-' . $state['bsCode']);
+    // $this->addReference('booking-state-' . $state['bsCode']);
     private $passwordEncoder;
 
     public function __construct(UserPasswordEncoderInterface $passwordEncoder)
