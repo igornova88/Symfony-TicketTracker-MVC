@@ -17,6 +17,10 @@ class AppFixtures extends Fixture
     // $this->addReference('booking-state-' . $state['bsCode']);
     // $this->addReference('booking-state-' . $state['bsCode']);
     // $this->addReference('booking-state-' . $state['bsCode']);
+    // $this->setReference('booking-state-' . $state['bsCode']);
+    // $this->getReference('booking-state-' . $state['bsCode']);
+
+    // $this->getReference('etat-4')
     private $passwordEncoder;
 
     public function __construct(UserPasswordEncoderInterface $passwordEncoder)
